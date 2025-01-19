@@ -1,6 +1,6 @@
 {
   "name": "@skriptx2/vanillagrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "source": "src/index.ts",
   "main": "dist/vanillagrid.js",
   "browser": "dist/vanillagrid.umd.js",
