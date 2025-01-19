@@ -30,7 +30,6 @@ Here’s a quick guide to setting up and using Vanilla Grid:
 
 1. **Download Vanilla Grid**: Grab the latest version from the official repository or CDN.
 
-
 ```
 
 npm i @skriptx2/vanillagrid
@@ -54,31 +53,47 @@ npm i @skriptx2/vanillagrid
     </script>
    ```
 
-5. **Style Your Table**: Apply custom styles via CSS to match your application’s design.
+3. **Style Your Table**: Apply custom styles via CSS to match your application’s design.
 
-6. **Refer our demos to pass CSS classes**: We have demos for vanilla css, bootstrap and bulma implementation on vanilla-grid demos repository
+4. **Refer our demos to pass CSS classes**: We have demos for vanilla css, bootstrap and bulma implementation on vanilla-grid demos repository
 
 **For Bootstrap**
 
-   ```js
-   import { VanillaGrid } from "@skriptx2/vanillagrid";
+```js
+import { VanillaGrid } from "@skriptx2/vanillagrid";
 
-    window.addEventListener("DOMContentLoaded", function () {
-      const table1 = document.querySelector("table.table-1");
+ window.addEventListener("DOMContentLoaded", function () {
+   const table1 = document.querySelector("table.table-1");
 
-      new VanillaGrid(table1, {
-        itemsPerPage: 10,
-        info: "Showing :start to :end of :total entries",
-        classNames: {
-          wrapper: "d-flex justify-content-between align-items-center",
-          ul: "pagination",
-          li: "page-item",
-          button: "page-link",
-          select: "form-select",
-        },
-      });
+   new VanillaGrid(table1, {
+     itemsPerPage: 10,
+     info: "Showing :start to :end of :total entries",
+     classNames: {
+       wrapper: "d-flex justify-content-between align-items-center",
+       ul: "pagination",
+       li: "page-item",
+       button: "page-link",
+       select: "form-select",
+     },
+   });
 
-   ```
+```
+
+** For Server Side Rendering **
+
+```js
+     const instance = new VanillaServerGrid(wrapper, {
+         itemsPerPage: itemsPerPage,
+         totalItems: totalItems
+         currentPage: page,
+         info: "Showing :start to :end of :total entries",
+         classNames: {},
+       });
+
+       instance.addEventListener("onPageChange", function ({ detail }) {
+         drawTable(detail.pageSelected);
+       });
+```
 
 ### Demos
 
@@ -86,9 +101,14 @@ Working Demo: https://vanillagriddemos.web.app
 
 Demo Source: https://github.com/skriptxadmin/vanilla-grid-demos.git
 
+Server Demo: https://vanillagriddemos.web.app/server/index.html
+
+Server Source: https://github.com/skriptxadmin/vanilla-grid-demos/blob/main/src/server/app.js
+
 ### When to Use Vanilla Grid
 
 Vanilla Grid is ideal for projects that:
+
 - Prioritize performance and simplicity.
 - Avoid adding unnecessary dependencies.
 - Handle small to medium-sized datasets.
@@ -101,4 +121,3 @@ While Vanilla Grid offers many advantages, it may not be the best choice for eve
 ### Conclusion
 
 Vanilla Grid strikes an elegant balance between functionality and minimalism. Its lightweight, dependency-free nature makes it a compelling choice for developers looking for a simple yet effective grid solution. By opting for Vanilla Grid, you can create fast, responsive, and easily customizable tables without the bloat of larger libraries. Whether you’re building a personal project or a professional application, Vanilla Grid is worth considering as a streamlined alternative to traditional grid tools.
-
