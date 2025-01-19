@@ -6,14 +6,31 @@
   "browser": "dist/vanillagrid.umd.js",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/skriptxadmin/vanilla-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skriptxadmin/vanilla-grid.git/issues"
+  },
+  "homepage": "https://github.com/skriptxadmin/vanilla-grid.git#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "parcel watch",
     "build": "parcel build"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["css",
+    "grid",
+    "responsive",
+    "vanilla",
+    "lightweight",
+    "minimalist",
+    "frontend",
+    "layout",
+    "web design"],
+  "author": "Alaksandar Jesus Gene AMS",
+  "license": "MIT",
+  "description": "Vanilla Grid is a lightweight and minimalist CSS grid system for building responsive, modern layouts with ease. It offers a clean, class-based approach and is ideal for projects that prioritize performance, simplicity, and maintainability.",
   "devDependencies": {
     "@parcel/packager-ts": "^2.13.3",
     "@parcel/transformer-typescript-types": "^2.13.3",

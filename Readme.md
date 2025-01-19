@@ -29,9 +29,18 @@ While DataTables.net is a powerful tool, it may not always be the right fit for 
 Here’s a quick guide to setting up and using Vanilla Grid:
 
 1. **Download Vanilla Grid**: Grab the latest version from the official repository or CDN.
+
+
+```
+
+npm i @skriptx2/vanillagrid
+
+
+```
+
 2. **Include the Script**: Add the Vanilla Grid JavaScript file to your project:
 
-   ```html
+   ```js
    <script type="module">
         import {VanillaGrid} from './dist/vanillagrid.js';
       window.addEventListener("DOMContentLoaded", function () {
@@ -47,7 +56,35 @@ Here’s a quick guide to setting up and using Vanilla Grid:
 
 5. **Style Your Table**: Apply custom styles via CSS to match your application’s design.
 
-6. **Refer our demos to pass CSSS classes**: We have demos for vanilla css, bootstrap and bulma implementation on vanilla-grid demos repository
+6. **Refer our demos to pass CSS classes**: We have demos for vanilla css, bootstrap and bulma implementation on vanilla-grid demos repository
+
+**For Bootstrap**
+
+   ```js
+   import { VanillaGrid } from "@skriptx2/vanillagrid";
+
+    window.addEventListener("DOMContentLoaded", function () {
+      const table1 = document.querySelector("table.table-1");
+
+      new VanillaGrid(table1, {
+        itemsPerPage: 10,
+        info: "Showing :start to :end of :total entries",
+        classNames: {
+          wrapper: "d-flex justify-content-between align-items-center",
+          ul: "pagination",
+          li: "page-item",
+          button: "page-link",
+          select: "form-select",
+        },
+      });
+
+   ```
+
+### Demos
+
+Working Demo: https://vanillagriddemos.web.app
+
+Demo Source: https://github.com/skriptxadmin/vanilla-grid-demos.git
 
 ### When to Use Vanilla Grid
 
