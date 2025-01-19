@@ -163,8 +163,7 @@ export class VanillaGrid {
         const nav = CreateElement('nav', '', this.config?.classNames?.nav);
         nav.append(ul);
 
-
-        const wrapper = CreateElement('div', '', this.config?.classNames?.wrapper);
+        const wrapper = CreateElement('div', '', `vg-wrapper ${this.config?.classNames?.wrapper || ''}`);
 
         if (this.infoText) {
             const info = CreateElement('div', '', 'info');
@@ -210,6 +209,10 @@ export class VanillaGrid {
             })
         }
 
+        const vgWrapper = this.table.parentNode?.querySelector('.vg-wrapper');
+        if(vgWrapper){
+            vgWrapper.remove();
+        }
         this.table.parentNode?.insertBefore(wrapper, this.table.nextSibling);
         this.wrapper = wrapper;
     }

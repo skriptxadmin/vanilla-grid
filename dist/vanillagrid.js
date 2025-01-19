@@ -148,7 +148,7 @@ class $4681ebe36e8f11ba$export$a0fa6baaee363926 {
         ul.append(li);
         const nav = (0, $278c2cae7ab6cf7a$export$b11b83b4c0e60f43)('nav', '', this.config?.classNames?.nav);
         nav.append(ul);
-        const wrapper = (0, $278c2cae7ab6cf7a$export$b11b83b4c0e60f43)('div', '', this.config?.classNames?.wrapper);
+        const wrapper = (0, $278c2cae7ab6cf7a$export$b11b83b4c0e60f43)('div', '', `vg-wrapper ${this.config?.classNames?.wrapper || ''}`);
         if (this.infoText) {
             const info = (0, $278c2cae7ab6cf7a$export$b11b83b4c0e60f43)('div', '', 'info');
             wrapper.append(info);
@@ -177,6 +177,8 @@ class $4681ebe36e8f11ba$export$a0fa6baaee363926 {
             this.currentPage = parseInt(wrapperSelect.value);
             this.render();
         });
+        const vgWrapper = this.table.parentNode?.querySelector('.vg-wrapper');
+        if (vgWrapper) vgWrapper.remove();
         this.table.parentNode?.insertBefore(wrapper, this.table.nextSibling);
         this.wrapper = wrapper;
     }
