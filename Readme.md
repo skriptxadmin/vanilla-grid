@@ -8,7 +8,7 @@ Vanilla Grid is a minimalist JavaScript library designed for rendering and manag
 
 ### Key Features of Vanilla Grid
 
-1. **Lightweight and Fast**: At just 8KB, Vanilla Grid minimizes the impact on your application’s load time.
+1. **Lightweight and Fast**: At just 7KB, Vanilla Grid and 6KB for Vanilla Server minimizes the impact on your application’s load time.
 2. **Dependency-Free**: It doesn’t rely on jQuery, React, or any other libraries, making integration straightforward and conflict-free.
 3. **Easy to Use**: With a simple API, Vanilla Grid allows developers to quickly set up and configure tables.
 4. **Customizable**: Despite its small size, it offers flexibility in terms of styling and functionality.
